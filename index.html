@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NehNeh | Artist</title>
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="hero" id="inicio">
+
+    <nav class="navbar">
+
+      <div class="logo">
+        <span>NehNeh</span>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Comisiones</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+        <li>
+          <button class="cart-button" id="open-cart">
+            🛒 Carrito
+            <span id="cart-count">0</span>
+          </button>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        DIGITAL ARTIST
+      </span>
+
+      <h1>
+        Bienvenido a<br>
+        <span>NehNeh</span>
+      </h1>
+
+      <p>
+        Ilustraciones y comisiones personalizadas.
+        Elegí tu estilo y encargá tu próximo dibujo.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#servicios" class="btn btn-primary">
+          Ver Comisiones
+        </a>
+
+        <a href="#portfolio" class="btn btn-secondary">
+          Ver Trabajos
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= COMISIONES ================= -->
+
+  <section class="services" id="servicios">
+
+    <div class="section-title">
+
+      <span>COMMISSIONS</span>
+
+      <h2>Elegí tu comisión</h2>
+
+      <p>
+        Seleccioná el tipo de ilustración que querés encargar.
+      </p>
+
+    </div>
+
+
+    <div class="services-container">
+
+
+      <!-- HEAD -->
+
+      <article class="service-card">
+
+        <div class="service-image">
+          <span>HEAD</span>
+        </div>
+
+        <div class="service-info">
+
+          <h3>Head</h3>
+
+          <p>
+            Ilustración enfocada en la cabeza y rostro del personaje.
+          </p>
+
+          <div class="service-bottom">
+
+            <span class="price">
+              USD 30
+            </span>
+
+            <button
+              class="add-cart"
+              data-name="Head"
+              data-price="30">
+              Agregar
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- HALF BODY -->
+
+      <article class="service-card">
+
+        <div class="service-image">
+          <span>HALF BODY</span>
+        </div>
+
+        <div class="service-info">
+
+          <h3>Half Body</h3>
+
+          <p>
+            Ilustración desde la cintura o torso hacia arriba.
+          </p>
+
+          <div class="service-bottom">
+
+            <span class="price">
+              USD 50
+            </span>
+
+            <button
+              class="add-cart"
+              data-name="Half Body"
+              data-price="50">
+              Agregar
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- FULL BODY -->
+
+      <article class="service-card">
+
+        <div class="service-image">
+          <span>FULL BODY</span>
+        </div>
+
+        <div class="service-info">
+
+          <h3>Full Body</h3>
+
+          <p>
+            Ilustración completa del personaje de pies a cabeza.
+          </p>
+
+          <div class="service-bottom">
+
+            <span class="price">
+              USD 80
+            </span>
+
+            <button
+              class="add-cart"
+              data-name="Full Body"
+              data-price="80">
+              Agregar
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PORTFOLIO ================= -->
+
+  <section class="portfolio" id="portfolio">
+
+    <div class="section-title">
+
+      <span>PORTFOLIO</span>
+
+      <h2>Mis trabajos</h2>
+
+      <p>
+        Algunos de los trabajos realizados por NehNeh.
+      </p>
+
+    </div>
+
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item">
+        <span>Artwork</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Artwork</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Artwork</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Artwork</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Artwork</span>
+      </div>
+
+      <div class="portfolio-item">
+        <span>Artwork</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACTO ================= -->
+
+  <section class="contact" id="contacto">
+
+    <div class="section-title">
+
+      <span>CONTACT</span>
+
+      <h2>¿Tenés una idea?</h2>
+
+      <p>
+        Ponete en contacto con NehNeh para hablar sobre tu comisión.
+      </p>
+
+      <a
+        href="mailto:email@ejemplo.com"
+        class="btn btn-primary">
+        Contactar
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CARRITO ================= -->
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+
+  <aside class="cart" id="cart">
+
+    <div class="cart-header">
+
+      <h2>Tu carrito</h2>
+
+      <button id="close-cart">
+        ✕
+      </button>
+
+    </div>
+
+
+    <div class="cart-items" id="cart-items">
+
+      <p class="empty-cart">
+        Tu carrito está vacío.
+      </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+
+        <span>Total</span>
+
+        <strong id="cart-total">
+          USD 0
+        </strong>
+
+      </div>
+
+
+      <button
+        class="checkout-button"
+        id="checkout-button"
+        disabled>
+
+        Proceder al pago
+
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <p>
+      © 2026 NehNeh. Todos los derechos reservados.
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>
