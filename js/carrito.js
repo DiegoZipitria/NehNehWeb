@@ -273,19 +273,129 @@ function updateCart() {
 // CHECKOUT
 // ============================================
 
+const checkoutOverlay =
+    document.getElementById("checkout-overlay");
+
+const closeCheckoutButton =
+    document.getElementById("close-checkout");
+
+const checkoutItemsElement =
+    document.getElementById("checkout-items");
+
+const checkoutTotalElement =
+    document.getElementById("checkout-total");
+
+const paypalOption =
+    document.getElementById("paypal-option");
+
+const cardOption =
+    document.getElementById("card-option");
+
+const paypalContainer =
+    document.getElementById("paypal-container");
+
+const cardContainer =
+    document.getElementById("card-container");
+
+
+// ============================================
+// ABRIR CHECKOUT
+// ============================================
+
 checkoutButton.addEventListener("click", () => {
 
-    console.log("Productos:", cart);
+    if (cart.length === 0) {
+        return;
+    }
 
-    console.log(
-        "Total:",
-        calculateTotal()
-    );
+    updateCheckout();
+
+    checkoutOverlay.classList.add("active");
+
+});
 
 
-    alert(
-        "El checkout de PayPal lo conectaremos en el siguiente paso."
-    );
+// ============================================
+// CERRAR CHECKOUT
+// ============================================
+
+closeCheckoutButton.addEventListener("click", () => {
+
+    checkoutOverlay.classList.remove("active");
+
+});
+
+
+// ============================================
+// ACTUALIZAR CHECKOUT
+// ============================================
+
+function updateCheckout() {
+
+    checkoutItemsElement.innerHTML = "";
+
+
+    cart.forEach(product => {
+
+        const item = document.createElement("div");
+
+        item.classList.add("checkout-item");
+
+
+        const total =
+            product.price * product.quantity;
+
+
+        item.innerHTML = `
+
+            <span>
+                ${product.name} × ${product.quantity}
+            </span>
+
+            <strong>
+                USD ${total}
+            </strong>
+
+        `;
+
+
+        checkoutItemsElement.appendChild(item);
+
+    });
+
+
+    checkoutTotalElement.textContent =
+        `USD ${calculateTotal()}`;
+
+}
+
+
+// ============================================
+// CAMBIAR MÉTODO DE PAGO
+// ============================================
+
+paypalOption.addEventListener("click", () => {
+
+    paypalOption.classList.add("active");
+
+    cardOption.classList.remove("active");
+
+    paypalContainer.classList.remove("hidden");
+
+    cardContainer.classList.add("hidden");
+
+});
+
+
+cardOption.addEventListener("click", () => {
+
+    cardOption.classList.add("active");
+
+    paypalOption.classList.remove("active");
+
+    cardContainer.classList.remove("hidden");
+
+    paypalContainer.classList.add("hidden");
 
 });
 

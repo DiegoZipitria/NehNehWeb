@@ -314,7 +314,7 @@
           USD 0
         </strong>
 
-      </div>
+    </div>
 
 
       <button
@@ -323,12 +323,201 @@
         disabled>
 
         Proceder al pago
-
       </button>
 
     </div>
 
   </aside>
+  
+
+  <!-- ================= CHECKOUT ================= -->
+
+<div class="checkout-overlay" id="checkout-overlay">
+
+    <div class="checkout-modal">
+
+        <div class="checkout-header">
+
+            <div>
+                <span class="checkout-label">
+                    CHECKOUT
+                </span>
+
+                <h2>Finalizar compra</h2>
+            </div>
+
+            <button
+                id="close-checkout"
+                class="close-checkout">
+                ✕
+            </button>
+
+        </div>
+
+
+        <!-- RESUMEN -->
+
+        <div class="checkout-summary">
+
+            <h3>Resumen del pedido</h3>
+
+            <div id="checkout-items">
+                <!-- Se genera con JavaScript -->
+            </div>
+
+            <div class="checkout-total">
+
+                <span>Total</span>
+
+                <strong id="checkout-total">
+                    USD 0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- DATOS DEL CLIENTE -->
+
+        <div class="customer-information">
+
+            <h3>Información de contacto</h3>
+
+            <label for="customer-name">
+                Nombre
+            </label>
+
+            <input
+                type="text"
+                id="customer-name"
+                placeholder="Tu nombre">
+
+
+            <label for="customer-email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="customer-email"
+                placeholder="tu@email.com">
+
+        </div>
+
+
+        <!-- METODO DE PAGO -->
+
+        <div class="payment-section">
+
+            <h3>Método de pago</h3>
+
+            <div class="payment-methods">
+
+                <!-- PayPal -->
+
+                <div
+                    class="payment-option active"
+                    id="paypal-option">
+
+                    <span>PayPal</span>
+
+                </div>
+
+
+                <!-- Tarjeta -->
+
+                <div
+                    class="payment-option"
+                    id="card-option">
+
+                    <span>💳 Tarjeta</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAYPAL -->
+
+            <div
+                class="payment-container"
+                id="paypal-container">
+
+                <div id="paypal-button-container"></div>
+
+            </div>
+
+
+            <!-- TARJETA -->
+
+            <div
+                class="payment-container hidden"
+                id="card-container">
+
+                <div class="card-field">
+
+                    <label>
+                        Número de tarjeta
+                    </label>
+
+                    <div id="card-number"></div>
+
+                </div>
+
+
+                <div class="card-row">
+
+                    <div class="card-field">
+
+                        <label>
+                            Fecha de vencimiento
+                        </label>
+
+                        <div id="card-expiration"></div>
+
+                    </div>
+
+
+                    <div class="card-field">
+
+                        <label>
+                            CVV
+                        </label>
+
+                        <div id="card-cvv"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-field">
+
+                    <label>
+                        Nombre en la tarjeta
+                    </label>
+
+                    <div id="card-name"></div>
+
+                </div>
+
+
+                <button
+                    id="card-pay-button"
+                    class="card-pay-button">
+
+                    Pagar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 
   <!-- ================= FOOTER ================= -->
